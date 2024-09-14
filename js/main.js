@@ -49,12 +49,16 @@ function mouseOverFunction() {
     eventBox.style.backgroundColor = 'orange';
     eventBox.style.color = 'white';
     boxText.textContent = 'Vous êtes sur moi !';
+    eventBox.style.transform = 'scale(1.4)';
+    eventBox.style.transition = 'transform 0.5s ease-in-out';
 }
 
 function mouseOutFunction() {
     eventBox.style.backgroundColor = 'blue';
     eventBox.style.color = 'white';
     boxText.textContent = 'Je suis sorti !';
+    eventBox.style.transform = 'scale(1)';
+    eventBox.style.transition = 'transform 0.5s ease-in-out';
 }
 
 function mouseDownFunction() {
