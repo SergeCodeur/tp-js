@@ -33,6 +33,10 @@ function clickFunction() {
     eventBox.style.backgroundColor = 'green';
     eventBox.style.color = 'white';
     boxText.textContent = 'Vous avez cliqué sur moi !';
+    eventBox.classList.add('click');
+    setTimeout(() => {
+        eventBox.classList.remove('click');
+    }, 2000);
 }
 
 function doubleClickFunction() {
