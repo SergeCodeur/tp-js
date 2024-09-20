@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background-color: #e8e8e8;
+    --text-color: #000;
+    --form-background: #fff;
+    --form-border: #dddfe2;
+    --button-background: #1877f2;
+    --button-hover-background: #166fe5;
+    --button-text-color: #fff;
+}
+
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #fff;
+    --form-background: #1e1e1e;
+    --form-border: #333;
+    --button-background: #1a73e8;
+    --button-hover-background: #1765d1;
+    --button-text-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.container {
+    margin: 20px;
+}
+
+.loading {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+form {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    margin: auto;
+    padding: 14px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid var(--form-border);
+    background: var(--form-background);
+    transition: background-color 0.5s, border-color 0.5s;
+}
+
+input, textarea {
+    border-radius: 6px;
+    font-size: 17px;
+    padding: 14px 16px;
+    width: 100%;
+    border: 1px solid var(--form-border);
+    outline: none;
+    margin-top: 10px;
+    background-color: var(--form-background);
+    color: var(--text-color);
+    transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+}
+
+button {
+    background-color: var(--button-background);
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 48px;
+    padding: 0 16px;
+    width: 100%;
+    cursor: pointer;
+    color: var(--button-text-color);
+    margin: 20px 0;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background: var(--button-hover-background);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.theme-toggle {
+    margin-top: 20px;
+}
